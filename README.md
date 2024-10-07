@@ -37,3 +37,27 @@ while True:
     client_socket.close()
 
 ```
+
+## Client Script (client.py)
+
+```python
+import socket
+
+# Create a TCP/IP socket
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to the server at the given address and port
+client_socket.connect(('localhost', 8080))
+
+# Send a message to the server
+message = "Hello, this is a message from the client!"
+client_socket.send(message.encode())
+
+# Receive the server's response
+response = client_socket.recv(1024).decode()
+print(f"Response from server: {response}")
+
+# Close the connection
+client_socket.close()
+
+```
