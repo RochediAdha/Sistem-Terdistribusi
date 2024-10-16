@@ -8,7 +8,7 @@ Berikut adalah script Java yang menggambarkan penerapan praktis Remote Method In
 
 Interface ini mendefinisikan metode remote yang bisa dipanggil oleh client, seperti pengecekan saldo dan transfer uang antar akun.
 
-```
+```java
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
